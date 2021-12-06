@@ -1,5 +1,6 @@
 {% load static %}
 
+{% block content %}
 <!DOCTYPE HTML>
 <!--
 	Miniport by HTML5 UP
@@ -42,14 +43,16 @@
 				<article class="container" id="top">
 					<div class="row">
 						<div class="4u">
+							{% for pro in profile %}
 
-							<span class="image fit"><img src="{{ image.profile.url }}" alt="" /></span>
+							<span class="image fit"><img src="{{ pro.image.url }}" alt="not available" /></span>
+							<!-- {% endfor %} -->
 
 						</div>
 						<div class="8u">
-							{{ profile.name }}
+							
 							<header>
-								{% for pro in profile %}
+								<!-- {% for pro in profile %} -->
 								<h1>Hi. I'm <strong>{{ pro.name }}</strong>.</h1>
 								{% endfor %}
 							</header>
@@ -241,3 +244,4 @@
 
 	</body>
 </html>
+{% endblock content %}
