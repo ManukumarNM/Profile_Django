@@ -8,5 +8,5 @@ class ProfileAdmin(admin.ModelAdmin):
 admin.site.register(Profile, ProfileAdmin)
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ["name", "email", "subject"]
+    list_display = ["name", "email"]
 admin.site.register(Contact, ContactAdmin)
