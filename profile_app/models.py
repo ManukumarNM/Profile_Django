@@ -18,11 +18,11 @@ class Profile(models.Model):
 			name += ' ' + str(self.last_name)
 		return name
 
-# class Contact(models.Model):
-#     name = models.CharField(max_length=200, null=False)
-#     email = models.EmailField()
-#     subject = models.CharField(max_length=500)
-#     message = models.TextField()
+class Contact(models.Model):
+    name = models.CharField(max_length=200, null=False)
+    email = models.EmailField()
+    subject = models.CharField(max_length=500)
+    message = models.TextField()
 
-#     def __str__(self):
-#         return self.name 
+    def __str__(self):
+        return self.name 
