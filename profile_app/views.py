@@ -6,5 +6,5 @@ def index(request):
     profile = Profile.objects.all()
     return render(request, 'index.html', {'profile':profile})
 
-def contact_view(request):
-    return render(request, 'contact.html')
+# def contact_view(request):
+#     return render(request, 'contact.html')
